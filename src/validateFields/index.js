@@ -24,7 +24,7 @@ const validateFields = (schema) => (req, res) => {
         typeof schema[key].childSchema === 'object' &&
         (!schema[key].nullable || value !== null)
       ) {
-        const newReq = { ...req, body: { ...req.body[key] } };
+        const newReq = { ...req, body: { ...req.body, ...req.body[key] } };
         validateFields(schema[key].childSchema)(newReq, res);
       }
 
