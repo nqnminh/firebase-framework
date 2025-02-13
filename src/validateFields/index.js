@@ -61,7 +61,13 @@ module.exports = (schema) => async (req, res, next) => {
     validateFields(schema)(req, res);
     return next();
   } catch (error) {
-    console.log(error);
+    console.log(
+      JSON.stringify({
+        severity: 'ERROR',
+        message: error.message,
+        ...error
+      })
+    );
 
     return res.status(400).send({
       status: 'error',
