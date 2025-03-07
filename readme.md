@@ -48,6 +48,20 @@ const config = {};
 module.exports = createFunctions(config, services);
 ```
 
+##### Create cloud functions 2nd gen
+
+`functions/index.js`
+
+```js
+const admin = require('firebase-admin');
+const { createFunctionsV2 } = require('firebase-framework');
+
+// same like v1
+// ...
+
+module.exports = createFunctionsV2(config, services);
+```
+
 ##### Config
 
 The config object can contain the following values:
