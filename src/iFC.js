@@ -61,6 +61,7 @@ async function ifc(service, options = defaultOptions, req = {}) {
     headers: {
       ...reqHeaders,
       ...headers,
+      'transfer-encoding': 'chunked'
     },
     ...otherOptions,
   });
