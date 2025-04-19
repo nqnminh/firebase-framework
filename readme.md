@@ -9,7 +9,7 @@ To begin you will need `nodejs` and `firebase-tools`
 To install `firebase-tools` run
 
 ```bash
-npm i -G firebase-tools
+bun i -G firebase-tools
 ```
 
 Go to [https://console.firebase.google.com]() and create a new Firebase project
@@ -27,7 +27,7 @@ You will need a serviceAccountKey.json field in the root of the project director
 
 ```bash
 cd functions
-npm install --save firebase-framework
+bun install --save firebase-framework
 ```
 
 Your `functions/index.js` file should contain:
